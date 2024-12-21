@@ -19,26 +19,15 @@ The dataset consists of various demographic, lifestyle, and hereditary factors, 
 **Lifestyle Habits**
   Dietary patterns: Frequency of high-calorie foods (FAVC), vegetable consumption (FCVC), main meals (NCP), consumption of food between meals (CAEC).
 
-Physical activity:
+**Physical activity:**
 - Frequency of physical activity (FAF), transportation modes (MTRANS).
 - Technology usage: Time using technological devices (TUE).
 - Alcohol consumption (CALC) and daily water intake (CH20).
 
-Hereditary Factors:
+**Hereditary Factors:**
 - Family history of overweight/obesity.
 - Smoking habits.
 
-Key Feature: BMI derived using the formula:
-BMI
-=
-Weight (kg)
-Height (m)
-2
-BMI= 
-Height (m) 
-2
- 
-Weight (kg)
 ​![image](https://github.com/user-attachments/assets/e93e2502-2cc9-4bae-88e0-90d02a21b501)
 
 **Data Preprocessing** 
@@ -59,21 +48,26 @@ Applied normalization to numeric variables for consistent scaling.
 Split the dataset into training and validation subsets (random seed = 888).
 
 **Models Developed**
+
 A variety of predictive models were trained and evaluated:
 
 **Linear Regression**
+
 Target variable: BMI.
 Key drops: Weight, Height (to avoid target leakage); Gender; and SCC (calorie monitoring bias).
 
 **Performance:** 
+
 RMSE (Training): 5.7
 RMSE (Validation): 5.8
 
 **Logistic Regression** 
+
 Target variable: Obesity categories.
 Dropped variables based on feature significance, including Age, FAF, and FCVC.
 
 **Decision Tree**
+
 Splits: 14
 AUC: 0.8770
 
